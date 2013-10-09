@@ -10,7 +10,7 @@ function funcionIniciar(arg_funcIniciar_ModRutear,manejador) {
 
         console.log("Alguien se ha conectado desde un navegador");
 
-        var varContenido = arg_funcIniciar_ModRutear(manejador,variableRuta,respuestaX);
+        var varContenido = arg_funcIniciar_ModRutear(manejador,variableRuta,respuesta);
 
         var registro = variableModuloFs.createWriteStream('registro.txt',{'flags':'a'});
         registro.write(variableRuta + '\n');
