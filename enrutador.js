@@ -1,10 +1,10 @@
-function funcionEnrutar(arg_manejador,arg_ruta) {
+function funcionEnrutar(arg_manejador,arg_ruta,respuestaX) {
     console.log("Voy a Rutear algo para " + arg_ruta);
     if (typeof arg_manejador[arg_ruta] === 'function') {
-        return arg_manejador[arg_ruta]();
+        arg_manejador[arg_ruta](respuestaX);
     } else {
         console.log("No Existe una funcion para la ruta: "+arg_ruta);
-        return "No Existe esta Pagina";
+        //return "No Existe esta Pagina";
     }
 
 

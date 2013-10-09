@@ -10,14 +10,14 @@ function funcionIniciar(arg_funcIniciar_ModRutear,manejador) {
 
         console.log("Alguien se ha conectado desde un navegador");
 
-        var varContenido = arg_funcIniciar_ModRutear(manejador,variableRuta);
+        var varContenido = arg_funcIniciar_ModRutear(manejador,variableRuta,respuestaX);
 
         var registro = variableModuloFs.createWriteStream('registro.txt',{'flags':'a'});
         registro.write(variableRuta + '\n');
 
-        respuesta.writeHead(200,{"Content-Type":"text/html"});
-        respuesta.write(varContenido);
-        respuesta.end("El texto que escribo aqui tambien se muestra en el navegador");
+        // respuesta.writeHead(200,{"Content-Type":"text/html"});
+        // respuesta.write(varContenido);
+        // respuesta.end("El texto que escribo aqui tambien se muestra en el navegador");
     }
     variableModuloHttp.createServer(funcionArrancaServidor).listen(8888);
 }
