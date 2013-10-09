@@ -23,13 +23,3 @@ function funcionIniciar(arg_funcIniciar_ModRutear,manejador) {
 }
 
 exports.exportsDeServidor = funcionIniciar;
-
-app.get('/hello.txt', function(req, res){
-
-  connectingdb(function(){
-        makingsome(function(){
-            res.send('Hello!');
-        });
-    }
-  )
-});

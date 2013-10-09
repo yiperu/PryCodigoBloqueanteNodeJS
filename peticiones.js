@@ -1,5 +1,11 @@
 function funcionInicio() {
     console.log("Has ingresado a la pagina de Inicio");
+
+    // Configuraremos aqui un codigo de tal forma que probemo el codigo bloqueante
+    var ahora = new Date().getTime();
+    while(new Date().getTime() < ahora + 20000)
+    // --------------- Esto hara un delay de 10 segundos
+
     return "Inicio";
 }
 
